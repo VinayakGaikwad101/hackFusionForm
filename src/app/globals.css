@@ -25,3 +25,23 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.redAsterisk {
+  color: red;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.logoContainer {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.qrCodeContainer {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
