@@ -76,12 +76,7 @@ const handleSubmit = async (form) => {
         // Handle unsuccessful uploads
         console.error('Upload failed:', error);
       }, 
-      () => {
-        // Handle successful uploads on complete
-            // Here we get the download URL of the uploaded file
-              fileRef.getDownloadURL.then((url) => {
-              console.log(`File uploaded successfully. Download URL: ${url}`);})
-      }
+      () => {}
     );
 }
 
@@ -106,88 +101,96 @@ const handleSubmit = async (form) => {
 
           <div className="formContent flex flex-wrap -mx-3 mb-6 p-5">
 
-        <p className='w-1/2 px-3 mb-6 mt-3 text-white'>
-          Team Name: <input type="text" className='text-black ' name="email" id="teamName" required />
+          <p className='w-full px-3 mb-6 '> <span className='bg-white text-black font-semibold py-2 px-4 border border-gray-400 rounded shadow hover:bg-gray-100'><a href="/yourfile.pdf">Rules Handbook here </a></span>
         </p>
 
-        <p className='w-1/2 px-3 mb-6 mt-3 text-white'>
-            College Name: <input className='text-black' type="text" name="email" id="collegeName" required />
+        <p className='w-full px-3 mb-6 '> <span className='text-white'>I have read the rules in the rules handbook and agree to abide by it</span>
+        <input  type='checkbox'   required  className='mx-1  bg-pink-100 rounded'/>
         </p>
 
-        <p className='w-1/2 px-3 mb-6  text-white'>
-            Leader Name: <input className='text-black' type="text" name="fullname" id="leaderName" required />
-        </p>
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Leader Mobile No: <input type="text" name="email" className='text-black' id="leaderMobNo" required />
-        </p>
-        <p className=' w-full px-3 mb-6 text-white'> 
-            Leader Email: <input type="email" name="teamname" id="leaderEmail" className='text-black' required />
+
+        <p className='w-1/2 px-3 mb-6 mt-3 '>
+        <span className='text-white'>Team Name:</span> <input type="text" className='text-black bg-pink-100 rounded' name="email" id="teamName" required />
         </p>
 
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Leader ID: <input type="file"  id="leaderID" required />
+        <p className='w-1/2 px-3 mb-6 mt-3 '>
+<span className='text-white'>College Name: </span><input className='text-black bg-pink-100 rounded' type="text" name="email" id="collegeName" required />
         </p>
 
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Leader Photo: <input type="file"  id="leaderPhoto" required />
+        <p className='w-1/2 px-3 mb-6  '> <span className='text-white'>Leader Name: </span>
+            <input className='text-black bg-pink-100 rounded' type="text" name="fullname" id="leaderName" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Leader Mobile No: </span>
+            <input type="text" name="email" className='text-black bg-pink-100 rounded' id="leaderMobNo" required />
+        </p>
+        <p className=' w-full px-3 mb-6 '> <span className='text-white'>Leader Email: </span> 
+             <input type="email" name="teamname" id="leaderEmail" className='text-black bg-pink-100 rounded' required />
         </p>
 
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Member 2 Name: <input type="text" name="email" className='text-black' id="member2Name" required />
-        </p>
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Member 2 Mobile No: <input className='text-black' type="text" name="email" id="member2MobNo" required />
-        </p>
-        <p className='w-full px-3 mb-6 text-white'>
-            Member 2 Email: <input className='text-black' type="email" name="email" id="member2Email" required />
-        </p>
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Member 2 ID: <input  type="file" id="member2ID" required />
-        </p>
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Member 2 Photo: <input  type="file" id="member2Photo" required />
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Leader College ID: </span>
+            <input type="file"  id="leaderID" required />
         </p>
 
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Member 3 Name: <input className='text-black' type="text" name="email" id="member3Name" required />
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'> Leader Photo: </span>
+           <input type="file"  id="leaderPhoto" required />
         </p>
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Member 3 Mobile No: <input className='text-black' type="text" name="email" id="member3MobNo" required />
+
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 2 Name: </span>
+            <input type="text" name="email" className='text-black bg-pink-100 rounded' id="member2Name" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 2 Mobile No: </span>
+            <input className='text-black bg-pink-100 rounded' type="text" name="email" id="member2MobNo" required />
+        </p>
+        <p className='w-full px-3 mb-6 '> <span className='text-white'>Member 2 Email: </span>
+            <input className='text-black bg-pink-100 rounded' type="email" name="email" id="member2Email" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 2 College ID: </span>
+            <input  type="file" id="member2ID" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 2 Photo: </span>
+            <input  type="file" id="member2Photo" required />
+        </p>
+
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 3 Name: </span>
+            <input className='text-black bg-pink-100 rounded' type="text" name="email" id="member3Name" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 3 Mobile No: </span>
+            <input className='text-black bg-pink-100 rounded' type="text" name="email" id="member3MobNo" required />
          </p>
-        <p className='w-full px-3 mb-6 text-white'>
-            Member 3 Email: <input className='text-black' type="email" name="email" id="member3Email" required />
+        <p className='w-full px-3 mb-6 '> <span className='text-white'>Member 3 Email: </span>
+            <input className='text-black bg-pink-100 rounded' type="email" name="email" id="member3Email" required />
         </p>
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Member 3 ID: <input  type="file" id="member3ID" required />
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 3 College ID: </span>
+            <input  type="file" id="member3ID" required />
         </p>
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Member 3 Photo: <input  type="file" id="member3Photo" required />
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 3 Photo: </span>
+            <input  type="file" id="member3Photo" required />
         </p>
 
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Member 4 Name: <input className='text-black' type="text" name="email" id="member4Name" required />
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 4 Name: </span>
+            <input className='text-black bg-pink-100 rounded' type="text" name="email" id="member4Name" required />
         </p>
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Member 4 Mobile No: <input className='text-black' type="text" name="email" id="member4MobNo" required />
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 4 Mobile No: </span>
+            <input className='text-black bg-pink-100 rounded' type="text" name="email" id="member4MobNo" required />
         </p>
-        <p className='w-full px-3 mb-6 text-white'>
-            Member 4 Email: <input className='text-black' type="email" name="email" id="member4Email" required />
+        <p className='w-full px-3 mb-6 '> <span className='text-white'>Member 4 Email: </span>
+            <input className='text-black bg-pink-100 rounded' type="email" name="email" id="member4Email" required />
         </p>
         
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Member 4 ID: <input  type="file" id="member4ID" required />
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 4 College ID: </span>
+            <input  type="file" id="member4ID" required />
         </p>
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Member 4 Photo: <input  type="file" id="member4Photo" required />
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 4 Photo: </span>
+            <input  type="file" id="member4Photo" required />
         </p>
 
 
 
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            City: <input type="text" name="email" className='text-black' id="cityName" required />
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>City: </span>
+             <input type="text" name="email" className='text-black bg-pink-100 rounded' id="cityName" required />
         </p>
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            District: <input className='text-black' type="text" name="email" id="districtName" required />
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>District: </span>
+            <input className='text-black bg-pink-100 rounded' type="text" name="email" id="districtName" required />
         </p>
 
 
@@ -198,19 +201,20 @@ const handleSubmit = async (form) => {
 
 <br />
 
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Payment Reference ID: <input type="text" className='text-black' name="email" id="refID" required placeholder='PP1234567890'/>
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Enter Payment Reference ID: </span>
+            <input type="text" className='text-black bg-pink-100 rounded' name="email" id="refID" required placeholder='PP1234567890'/>
         </p>
 
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Screenshot of Payment: </span>
+            <input  type="file" id="paymentSS" required />
+        </p>
 
-
-
-
-
-
-
-        <p className='w-1/2 px-3 mb-6 text-white'>
-            Screenshot of Payment: <input  type="file" id="paymentSS" required />
+        <p className='w-full px-3 mb-6 '> <span className='text-white'>I  I have read and agreed to all the terms and conditions </span>
+        <input  type='checkbox'   required onChange={async (e) => {
+          if(e.target.checked) {
+            alert("1) Payment is non refundable.\n2) Minimum one member should be a girl.\n3) 4 Members are must for every team.\n4) Students from Maharashtra must need to come offline for hackathon, meanwhile other students can participate online.")
+          }
+        }}  className='mx-1  bg-pink-100 rounded'/>
         </p>
 
         <button type="submit" name="submit" className='btn btn-border-4 w-full'>Submit</button>
