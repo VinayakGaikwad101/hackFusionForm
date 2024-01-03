@@ -203,6 +203,7 @@ const handleSubmit = async (form) => {
 
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Enter Payment Reference ID: </span>
             <input type="text" className='text-black bg-pink-100 rounded' name="email" id="refID" required placeholder='PP1234567890'/>
+            <p className='text-white'>Rs. 499/- per team</p>
         </p>
 
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Screenshot of Payment: </span>
