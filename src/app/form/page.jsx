@@ -6,7 +6,8 @@ import { getStorage, ref as storageRef, uploadBytesResumable } from "firebase/st
 import Image from 'next/image'
 import Logo from '../../../public/hackfusionlogo.png'
 import QRCode from '../../../public/QRCode.jpeg'
-
+import backgroundImage1 from '../../../public/background01.jpg'
+import backgroundImage2 from '../../../public/background02.jpg'
 
 export default function Form() {
 const handleSubmit = async (form) => {
@@ -89,97 +90,143 @@ const handleSubmit = async (form) => {
 }
   
   return (
-    <form  id="frmContact" onSubmit={handleSubmit}>
+    <>
+    <div className="backgroundContainer bg1" style={{
+      backgroundImage: `url(${backgroundImage1.src})`,
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      width: "100vw",
+      height: "100vh",
+      display: 'flex',
+      justifyContent: 'center'
+    }}>
+    <form id="frmContact" onSubmit={handleSubmit} className='max-w-lg w-full'>
           <div className="logoContainer">             <Image src={Logo} layout="fill" alt='hackfusion2024logo'/></div>
-        <p>
-            Leader Name: <input type="text" name="fullname" id="leaderName" required />
-        </p>
-        <p>
-            Leader Email: <input type="email" name="teamname" id="leaderEmail" required />
-        </p>
-        <p>
-            Leader Mobile No: <input type="text" name="email" id="leaderMobNo" required />
-        </p>
-        <p>
-            Member 2 Name: <input type="text" name="email" id="member2Name" required />
-        </p>
-        <p>
-            Member 2 Email: <input type="email" name="email" id="member2Email" required />
-        </p>
-        <p>
-            Member 2 Mobile No: <input type="text" name="email" id="member2MobNo" required />
-        </p>
-        <p>
-            Member 3 Name: <input type="text" name="email" id="member3Name" required />
-        </p>
-        <p>
-            Member 3 Email: <input type="email" name="email" id="member3Email" required />
-        </p>
-        <p>
-            Member 3 Mobile No: <input type="text" name="email" id="member3MobNo" required />
-        </p>
-        <p>
-            Member 4 Name: <input type="text" name="email" id="member4Name" required />
-        </p>
-        <p>
-            Member 4 Email: <input type="email" name="email" id="member4Email" required />
-        </p>
-        <p>
-            Member 4 Mobile No: <input type="text" name="email" id="member4MobNo" required />
-        </p>
-        <p>
-            Team Name: <input type="text" name="email" id="teamName" required />
-        </p>
-        <p>
-            College Name: <input type="text" name="email" id="collegeName" required />
-        </p>
-        <p>
-            City: <input type="text" name="email" id="cityName" required />
-        </p>
-        <p>
-            District: <input type="text" name="email" id="districtName" required />
-        </p>
-        <p>
-            Payment Reference ID: <input type="text" name="email" id="refID" required placeholder='PP1234567890'/>
+
+          <div className="formContent flex flex-wrap -mx-3 mb-6 p-5">
+
+        <p className='w-1/2 px-3 mb-6 mt-3 text-white'>
+          Team Name: <input type="text" className='text-black ' name="email" id="teamName" required />
         </p>
 
-        <div className="qrCodeContainer">
+        <p className='w-1/2 px-3 mb-6 mt-3 text-white'>
+            College Name: <input className='text-black' type="text" name="email" id="collegeName" required />
+        </p>
+
+        <p className='w-1/2 px-3 mb-6  text-white'>
+            Leader Name: <input className='text-black' type="text" name="fullname" id="leaderName" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Leader Mobile No: <input type="text" name="email" className='text-black' id="leaderMobNo" required />
+        </p>
+        <p className=' w-full px-3 mb-6 text-white'> 
+            Leader Email: <input type="email" name="teamname" id="leaderEmail" className='text-black' required />
+        </p>
+
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Leader ID: <input type="file"  id="leaderID" required />
+        </p>
+
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Leader Photo: <input type="file"  id="leaderPhoto" required />
+        </p>
+
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Member 2 Name: <input type="text" name="email" className='text-black' id="member2Name" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Member 2 Mobile No: <input className='text-black' type="text" name="email" id="member2MobNo" required />
+        </p>
+        <p className='w-full px-3 mb-6 text-white'>
+            Member 2 Email: <input className='text-black' type="email" name="email" id="member2Email" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Member 2 ID: <input  type="file" id="member2ID" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Member 2 Photo: <input  type="file" id="member2Photo" required />
+        </p>
+
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Member 3 Name: <input className='text-black' type="text" name="email" id="member3Name" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Member 3 Mobile No: <input className='text-black' type="text" name="email" id="member3MobNo" required />
+         </p>
+        <p className='w-full px-3 mb-6 text-white'>
+            Member 3 Email: <input className='text-black' type="email" name="email" id="member3Email" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Member 3 ID: <input  type="file" id="member3ID" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Member 3 Photo: <input  type="file" id="member3Photo" required />
+        </p>
+
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Member 4 Name: <input className='text-black' type="text" name="email" id="member4Name" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Member 4 Mobile No: <input className='text-black' type="text" name="email" id="member4MobNo" required />
+        </p>
+        <p className='w-full px-3 mb-6 text-white'>
+            Member 4 Email: <input className='text-black' type="email" name="email" id="member4Email" required />
+        </p>
+        
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Member 4 ID: <input  type="file" id="member4ID" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Member 4 Photo: <input  type="file" id="member4Photo" required />
+        </p>
+
+
+
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            City: <input type="text" name="email" className='text-black' id="cityName" required />
+        </p>
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            District: <input className='text-black' type="text" name="email" id="districtName" required />
+        </p>
+
+
+        <div className="qrCodeContainer px-3 mb-6">
           <Image src={QRCode}  layout='fill'  alt='qrcode'/>
         </div>
         
-        <p>
-    Leader Photo: <input type="file" id="leaderPhoto" required />
-</p>
-<p>
-    Leader ID: <input type="file" id="leaderID" required />
-</p>
 
-<p>
-    Member 2 Photo: <input type="file" id="member2Photo" required />
-</p>
-<p>
-    Member 2 ID: <input type="file" id="member2ID" required />
-</p>
+<br />
 
-<p>
-    Member 3 Photo: <input type="file" id="member3Photo" required />
-</p>
-<p>
-    Member 3 ID: <input type="file" id="member3ID" required />
-</p>
-
-<p>
-    Member 4 Photo: <input type="file" id="member4Photo" required />
-</p>
-<p>
-    Member 4 ID: <input type="file" id="member4ID" required />
-</p>
-
-        <p>
-            Screenshot of Payment: <input type="file" id="paymentSS" required />
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Payment Reference ID: <input type="text" className='text-black' name="email" id="refID" required placeholder='PP1234567890'/>
         </p>
 
-        <button type="submit" name="submit" >Submit</button>
+
+
+
+
+
+
+
+        <p className='w-1/2 px-3 mb-6 text-white'>
+            Screenshot of Payment: <input  type="file" id="paymentSS" required />
+        </p>
+
+        <button type="submit" name="submit" className='btn btn-border-4 w-full'>Submit</button>
+        </div>
     </form>
+    </div>
+        <div className="backgroundContainer bg2" style={{
+          backgroundImage: `url(${backgroundImage2.src})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          width: "100vw",
+          height: "100vh",
+          display: 'flex',
+          justifyContent: 'center'
+        }}></div>
+        </>
   )
 }

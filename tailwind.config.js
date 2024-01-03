@@ -28,7 +28,16 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        "40-r": "40rem",
+        "30-r": "30rem",
+      },
+      height: {
+        "40-r": "40rem",
+        "30-r": "30rem",
+      },
+    },
   },
   plugins: [],
 };
