@@ -129,3 +129,49 @@ border: 1px solid rgba(64, 64, 64, 0.51);
   border-color: #ffffff;
 }
 
+
+/* For mobile s */
+@media only screen and (max-width: 320px) {
+  body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+  }
+  .backgroundContainer {
+      height: 100vh; /* Full height */
+      width: 100vw; /* Full width */
+      background-size: 100% auto; /* Stretch the background image horizontally */
+  }
+}
+
+/* For mobile m */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+
+  }
+  .backgroundContainer {
+      height: 100vh; /* Full height */
+      width: 100vw; /* Full width */
+      background-size: 100% auto; /* Stretch the background image horizontally */
+  }
+}
+
+/* For mobile l */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+
+  }
+  .backgroundContainer {
+      height: 100vh; /* Full height */
+      width: 100vw; /* Full width */
+      background-size: 100% auto; /* Stretch the background image horizontally */
+  }
+}
+
+
