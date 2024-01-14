@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import {set, database, ref} from '../firebase'
 import { getStorage, ref as storageRef, uploadBytesResumable } from "firebase/storage";
 import Image from 'next/image'
@@ -10,6 +10,16 @@ import backgroundImage1 from '../../../public/background01.jpg'
 import backgroundImage2 from '../../../public/background02.jpg'
 
 export default function Form() {
+
+  const bg1Ref = useRef();
+  const bg2Ref = useRef();
+
+  useEffect(() => {
+      const totalHeight = document.body.scrollHeight;
+      bg1Ref.current.style.height = `${totalHeight / 2}px`;
+      bg2Ref.current.style.height = `${totalHeight / 2}px`;
+  }, []);
+
 const handleSubmit = async (form) => {
   form.preventDefault();
   let now = new Date();
@@ -86,20 +96,45 @@ const handleSubmit = async (form) => {
   
   return (
     <>
-    <div className="backgroundContainer bg1" style={{
-      backgroundImage: `url(${backgroundImage1.src})`,
-      backgroundPosition: "center",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      width: "100vw",
-      height: "100vh",
-      display: 'flex',
-      justifyContent: 'center'
-    }}>
-    <form id="frmContact" onSubmit={handleSubmit} className='max-w-lg w-full'>
+        <div style={{position: 'relative'}}>
+            <div ref={bg1Ref} className="backgroundContainer bg1" style={{
+                backgroundImage: `url(${backgroundImage1.src})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                width: "100%",
+                display: 'flex',
+                justifyContent: 'center'
+            }}>
+            </div>
+
+            <div ref={bg2Ref} className="backgroundContainer bg2" style={{
+                backgroundImage: `url(${backgroundImage2.src})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                width: "100%",
+                display: 'flex',
+                justifyContent: 'center'
+            }}>
+            </div>
+
+
+    <form id="frmContact" style={{
+        position: 'absolute',
+        top: '10%', // Adjust this value as needed
+        left: '10%', // Change this line
+        transform: 'translate(-10%, -10%)', // Adjust this line
+        width: '100%',
+        maxWidth: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    }} onSubmit={handleSubmit} className='max-w-lg w-full'>
           <div className="logoContainer">             <Image src={Logo} layout="fill" alt='hackfusion2024logo'/></div>
 
-          <div className="formContent flex flex-wrap -mx-3 mb-6 p-5">
+          <div className="formContent flex flex-wrap mx-3 mb-6 p-5">
 
           <p className='w-full px-3 mb-6 '> <span className='bg-white text-black font-semibold py-2 px-4 border border-gray-400 rounded shadow hover:bg-gray-100'><a href="/yourfile.pdf">Rules Handbook here </a></span>
         </p>
@@ -222,16 +257,7 @@ const handleSubmit = async (form) => {
         </div>
     </form>
     </div>
-        <div className="backgroundContainer bg2" style={{
-          backgroundImage: `url(${backgroundImage2.src})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          width: "100vw",
-          height: "100vh",
-          display: 'flex',
-          justifyContent: 'center'
-        }}></div>
+
         </>
   )
 }
