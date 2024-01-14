@@ -127,7 +127,6 @@ border: 1px solid rgba(64, 64, 64, 0.51);
   border-color: #ffffff;
 }
 
-
 /* For mobile s */
 @media only screen and (max-width: 320px) {
   body, html {
@@ -140,6 +139,9 @@ border: 1px solid rgba(64, 64, 64, 0.51);
       width: 100vw; /* Full width */
       background-size: 100% auto; /* Stretch the background image horizontally */
   }
+  input {
+      width: 80%; /* Half the width */
+  }
 }
 
 /* For mobile m */
@@ -148,12 +150,14 @@ border: 1px solid rgba(64, 64, 64, 0.51);
       margin: 0;
       padding: 0;
       overflow-x: hidden;
-
   }
   .backgroundContainer {
       height: 100vh; /* Full height */
       width: 100vw; /* Full width */
       background-size: 100% auto; /* Stretch the background image horizontally */
+  }
+  input {
+      width: 80%; /* Half the width */
   }
 }
 
@@ -163,13 +167,13 @@ border: 1px solid rgba(64, 64, 64, 0.51);
       margin: 0;
       padding: 0;
       overflow-x: hidden;
-
   }
   .backgroundContainer {
       height: 100vh; /* Full height */
       width: 100vw; /* Full width */
       background-size: 100% auto; /* Stretch the background image horizontally */
   }
+  input {
+      width: 80%; /* Half the width */
+  }
 }
-
-

@@ -155,7 +155,7 @@ const handleSubmit = async (form) => {
         <p className='w-1/2 px-3 mb-6  '> <span className='text-white'>Leader Name: </span>
             <input className='text-black bg-pink-100 rounded' type="text" name="fullname" id="leaderName" required />
         </p>
-        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Leader Mobile No: </span>
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Leader Mobile: </span>
             <input type="text" className='text-black bg-pink-100 rounded' id="leaderMobNo" required />
         </p>
         <p className=' w-full px-3 mb-6 '> <span className='text-white'>Leader Email: </span> 
@@ -173,7 +173,7 @@ const handleSubmit = async (form) => {
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 2 Name: </span>
             <input type="text" className='text-black bg-pink-100 rounded' id="member2Name" required />
         </p>
-        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 2 Mobile No: </span>
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 2 Mobile: </span>
             <input className='text-black bg-pink-100 rounded' type="text" id="member2MobNo" required />
         </p>
         <p className='w-full px-3 mb-6 '> <span className='text-white'>Member 2 Email: </span>
@@ -189,7 +189,7 @@ const handleSubmit = async (form) => {
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 3 Name: </span>
             <input className='text-black bg-pink-100 rounded' type="text"  id="member3Name" required />
         </p>
-        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 3 Mobile No: </span>
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 3 Mobile: </span>
             <input className='text-black bg-pink-100 rounded' type="text"  id="member3MobNo" required />
          </p>
         <p className='w-full px-3 mb-6 '> <span className='text-white'>Member 3 Email: </span>
@@ -205,7 +205,7 @@ const handleSubmit = async (form) => {
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 4 Name: </span>
             <input className='text-black bg-pink-100 rounded' type="text"  id="member4Name" required />
         </p>
-        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 4 Mobile No: </span>
+        <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 4 Mobile: </span>
             <input className='text-black bg-pink-100 rounded' type="text"  id="member4MobNo" required />
         </p>
         <p className='w-full px-3 mb-6 '> <span className='text-white'>Member 4 Email: </span>
