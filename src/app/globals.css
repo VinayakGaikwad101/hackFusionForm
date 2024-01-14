@@ -140,7 +140,7 @@ border: 1px solid rgba(64, 64, 64, 0.51);
       background-size: 100% auto; /* Stretch the background image horizontally */
   }
   input {
-      width: 80%; /* Half the width */
+      width: 105%; /* Half the width */
   }
   input[type="file"] {
       width: 85%; /* Width for file inputs */
