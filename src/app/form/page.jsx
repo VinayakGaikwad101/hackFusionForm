@@ -139,9 +139,14 @@ const handleSubmit = async (form) => {
           <p className='w-full px-3 mb-6 '> <span className='bg-white text-black font-semibold py-2 px-4 border border-gray-400 rounded shadow hover:bg-gray-100'><a href="/yourfile.pdf">Rules Handbook here </a></span>
         </p>
 
-        <p className='w-full px-3 mb-6 '> <span className='text-white'>I have read the rules in the rules handbook and agree to abide by it</span>
-        <input  type='checkbox'   required  className='mx-1  bg-pink-100 rounded'/>
-        </p>
+        <div style={{borderTop: "3px solid white", width: "100%", marginBottom: "8px"}}></div>
+
+        <p className='w-full px-3 mb-6 flex items-center'> 
+  <span className='text-white mr-2'>I have read and agreed to all the terms and conditions</span>
+  <input type='checkbox' required 
+ className='mx-1 bg-pink-100 rounded'/>
+</p>
+
 
 
         <p className='w-1/2 px-3 mb-6 mt-3 '>
@@ -152,6 +157,9 @@ const handleSubmit = async (form) => {
 <span className='text-white'>College Name: </span><input className='text-black bg-pink-100 rounded' type="text"  id="collegeName" required />
         </p>
 
+        <div style={{borderTop: "3px solid white", width: "100%", marginBottom: "8px"}}></div>
+
+
         <p className='w-1/2 px-3 mb-6  '> <span className='text-white'>Leader Name: </span>
             <input className='text-black bg-pink-100 rounded' type="text" name="fullname" id="leaderName" required />
         </p>
@@ -159,7 +167,7 @@ const handleSubmit = async (form) => {
             <input type="text" className='text-black bg-pink-100 rounded' id="leaderMobNo" required />
         </p>
         <p className=' w-full px-3 mb-6 '> <span className='text-white'>Leader Email: </span> 
-             <input type="email" name="teamname" id="leaderEmail" className='text-black bg-pink-100 rounded' required />
+             <input type="email" name="teamname" id="leaderEmail" className='text-black bg-pink-100 rounded'  required />
         </p>
 
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Leader College ID: </span>
@@ -169,6 +177,8 @@ const handleSubmit = async (form) => {
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'> Leader Photo: </span>
            <input type="file"  id="leaderPhoto" required />
         </p>
+
+        <div style={{borderTop: "3px solid white", width: "100%", marginBottom: "8px"}}></div>
 
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 2 Name: </span>
             <input type="text" className='text-black bg-pink-100 rounded' id="member2Name" required />
@@ -186,6 +196,8 @@ const handleSubmit = async (form) => {
             <input  type="file" id="member2Photo" required />
         </p>
 
+        <div style={{borderTop: "3px solid white", width: "100%", marginBottom: "8px"}}></div>
+
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 3 Name: </span>
             <input className='text-black bg-pink-100 rounded' type="text"  id="member3Name" required />
         </p>
@@ -201,6 +213,8 @@ const handleSubmit = async (form) => {
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 3 Photo: </span>
             <input  type="file" id="member3Photo" required />
         </p>
+
+        <div style={{borderTop: "3px solid white", width: "100%", marginBottom: "8px"}}></div>
 
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 4 Name: </span>
             <input className='text-black bg-pink-100 rounded' type="text"  id="member4Name" required />
@@ -219,7 +233,7 @@ const handleSubmit = async (form) => {
             <input  type="file" id="member4Photo" required />
         </p>
 
-
+        <div style={{borderTop: "3px solid white", width: "100%", marginBottom: "8px"}}></div>
 
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>City: </span>
              <input type="text" className='text-black bg-pink-100 rounded' id="cityName" required />
@@ -245,13 +259,15 @@ const handleSubmit = async (form) => {
             <input  type="file" id="paymentSS" required />
         </p>
 
-        <p className='w-full px-3 mb-6 '> <span className='text-white'>I have read and agreed to all the terms and conditions </span>
-        <input  type='checkbox'   required onChange={async (e) => {
-          if(e.target.checked) {
-            alert("1) Payment is non refundable.\n2) Minimum one member should be a girl.\n3) 4 Members are must for every team.\n4) Students from Maharashtra must need to come offline for hackathon, meanwhile other students can participate online.")
-          }
-        }}  className='mx-1  bg-pink-100 rounded'/>
-        </p>
+        <p className='w-full px-3 mb-6 flex items-center'> 
+  <span className='text-white mr-2'>I have read and agreed to all the terms and conditions</span>
+  <input type='checkbox' required onChange={async (e) => {
+    if(e.target.checked) {
+      alert("1) Payment is non refundable.\n2) Minimum one member should be a girl.\n3) 4 Members are must for every team.\n4) Students from Maharashtra must need to come offline for hackathon, meanwhile other students can participate online.")
+    }
+  }} className='mx-1 bg-pink-100 rounded'/>
+</p>
+
 
         <button type="submit" name="submit" className='btn btn-border-4 w-full'>Submit</button>
         </div>

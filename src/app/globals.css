@@ -45,6 +45,7 @@ body, html {
   align-items: center;
   margin: auto; 
   top: -120px;
+  /* z-index: 1; */
 }
 
 .qrCodeContainer {
@@ -64,14 +65,16 @@ form {
   width: 100%;
 }
 
+
 .formContent {
   position: relative;
   top: -250px;
-background: rgba(0, 0, 0, 0.34);
-width: 100%;
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-border: 1px solid rgba(64, 64, 64, 0.51);
+  background: rgba(0, 0, 0, 0.34);
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(64, 64, 64, 0.51);
+  backdrop-filter: blur(3.5px);
 }
 
 /* button  */
@@ -126,6 +129,7 @@ border: 1px solid rgba(64, 64, 64, 0.51);
   height: calc(100% + 15px);
   border-color: #ffffff;
 }
+
 
 /* For mobile s */
 @media only screen and (max-width: 320px) {
@@ -184,5 +188,38 @@ border: 1px solid rgba(64, 64, 64, 0.51);
   }
   input[type="file"] {
       width: 85%; /* Width for file inputs */
+  }
+}
+
+/* remove if issue occur */
+/* CSS for mobile screens */
+@media (max-width: 767px) {
+  .formContent, form {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* CSS for larger screens */
+@media (min-width: 768px) {
+  .formContent, form {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+/* remove if issue occur */
+
+
+/* CSS for mobile s and m screens */
+@media (max-width: 767px) {
+  .logoContainer {
+    top: -95px; /* Adjust this value as needed */
+  }
+}
+
+/* CSS for larger screens */
+@media (min-width: 768px) {
+  .logoContainer {
+    top: -120px;
   }
 }
