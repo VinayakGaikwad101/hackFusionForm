@@ -142,6 +142,9 @@ border: 1px solid rgba(64, 64, 64, 0.51);
   input {
       width: 80%; /* Half the width */
   }
+  input[type="file"] {
+      width: 85%; /* Width for file inputs */
+  }
 }
 
 /* For mobile m */
@@ -159,6 +162,9 @@ border: 1px solid rgba(64, 64, 64, 0.51);
   input {
       width: 80%; /* Half the width */
   }
+  input[type="file"] {
+      width: 85%; /* Width for file inputs */
+  }
 }
 
 /* For mobile l */
@@ -175,5 +181,8 @@ border: 1px solid rgba(64, 64, 64, 0.51);
   }
   input {
       width: 80%; /* Half the width */
+  }
+  input[type="file"] {
+      width: 85%; /* Width for file inputs */
   }
 }
