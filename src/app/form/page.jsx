@@ -145,18 +145,18 @@ const handleSubmit = async (form) => {
 
 
         <p className='w-1/2 px-3 mb-6 mt-3 '>
-        <span className='text-white'>Team Name:</span> <input type="text" className='text-black bg-pink-100 rounded' name="email" id="teamName" required />
+        <span className='text-white'>Team Name:</span> <input type="text" className='text-black bg-pink-100 rounded'  id="teamName" required />
         </p>
 
         <p className='w-1/2 px-3 mb-6 mt-3 '>
-<span className='text-white'>College Name: </span><input className='text-black bg-pink-100 rounded' type="text" name="email" id="collegeName" required />
+<span className='text-white'>College Name: </span><input className='text-black bg-pink-100 rounded' type="text"  id="collegeName" required />
         </p>
 
         <p className='w-1/2 px-3 mb-6  '> <span className='text-white'>Leader Name: </span>
             <input className='text-black bg-pink-100 rounded' type="text" name="fullname" id="leaderName" required />
         </p>
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Leader Mobile No: </span>
-            <input type="text" name="email" className='text-black bg-pink-100 rounded' id="leaderMobNo" required />
+            <input type="text" className='text-black bg-pink-100 rounded' id="leaderMobNo" required />
         </p>
         <p className=' w-full px-3 mb-6 '> <span className='text-white'>Leader Email: </span> 
              <input type="email" name="teamname" id="leaderEmail" className='text-black bg-pink-100 rounded' required />
@@ -171,13 +171,13 @@ const handleSubmit = async (form) => {
         </p>
 
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 2 Name: </span>
-            <input type="text" name="email" className='text-black bg-pink-100 rounded' id="member2Name" required />
+            <input type="text" className='text-black bg-pink-100 rounded' id="member2Name" required />
         </p>
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 2 Mobile No: </span>
-            <input className='text-black bg-pink-100 rounded' type="text" name="email" id="member2MobNo" required />
+            <input className='text-black bg-pink-100 rounded' type="text" id="member2MobNo" required />
         </p>
         <p className='w-full px-3 mb-6 '> <span className='text-white'>Member 2 Email: </span>
-            <input className='text-black bg-pink-100 rounded' type="email" name="email" id="member2Email" required />
+            <input className='text-black bg-pink-100 rounded' type="email" id="member2Email" required />
         </p>
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 2 College ID: </span>
             <input  type="file" id="member2ID" required />
@@ -187,13 +187,13 @@ const handleSubmit = async (form) => {
         </p>
 
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 3 Name: </span>
-            <input className='text-black bg-pink-100 rounded' type="text" name="email" id="member3Name" required />
+            <input className='text-black bg-pink-100 rounded' type="text"  id="member3Name" required />
         </p>
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 3 Mobile No: </span>
-            <input className='text-black bg-pink-100 rounded' type="text" name="email" id="member3MobNo" required />
+            <input className='text-black bg-pink-100 rounded' type="text"  id="member3MobNo" required />
          </p>
         <p className='w-full px-3 mb-6 '> <span className='text-white'>Member 3 Email: </span>
-            <input className='text-black bg-pink-100 rounded' type="email" name="email" id="member3Email" required />
+            <input className='text-black bg-pink-100 rounded' type="email" id="member3Email" required />
         </p>
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 3 College ID: </span>
             <input  type="file" id="member3ID" required />
@@ -203,13 +203,13 @@ const handleSubmit = async (form) => {
         </p>
 
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 4 Name: </span>
-            <input className='text-black bg-pink-100 rounded' type="text" name="email" id="member4Name" required />
+            <input className='text-black bg-pink-100 rounded' type="text"  id="member4Name" required />
         </p>
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 4 Mobile No: </span>
-            <input className='text-black bg-pink-100 rounded' type="text" name="email" id="member4MobNo" required />
+            <input className='text-black bg-pink-100 rounded' type="text"  id="member4MobNo" required />
         </p>
         <p className='w-full px-3 mb-6 '> <span className='text-white'>Member 4 Email: </span>
-            <input className='text-black bg-pink-100 rounded' type="email" name="email" id="member4Email" required />
+            <input className='text-black bg-pink-100 rounded' type="email" id="member4Email" required />
         </p>
         
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Member 4 College ID: </span>
@@ -222,10 +222,10 @@ const handleSubmit = async (form) => {
 
 
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>City: </span>
-             <input type="text" name="email" className='text-black bg-pink-100 rounded' id="cityName" required />
+             <input type="text" className='text-black bg-pink-100 rounded' id="cityName" required />
         </p>
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>District: </span>
-            <input className='text-black bg-pink-100 rounded' type="text" name="email" id="districtName" required />
+            <input className='text-black bg-pink-100 rounded' type="text"  id="districtName" required />
         </p>
 
 
@@ -237,7 +237,7 @@ const handleSubmit = async (form) => {
 <br />
 
         <p className='w-1/2 px-3 mb-6 '> <span className='text-white'>Enter Payment Reference ID: </span>
-            <input type="text" className='text-black bg-pink-100 rounded' name="email" id="refID" required placeholder='PP1234567890'/>
+            <input type="text" className='text-black bg-pink-100 rounded' id="refID" required placeholder='PP1234567890'/>
             <p className='text-white'>Rs. 499/- per team</p>
         </p>
 
